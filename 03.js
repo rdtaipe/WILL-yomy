@@ -14,6 +14,8 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
+
+  return amigos.filter(find=>find.nombre===nombre)[0]
   
 }
 

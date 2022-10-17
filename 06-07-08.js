@@ -11,6 +11,10 @@ function crearClasePersona() {
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
       // Tu código aca:
+      this.nombre=nombre
+      this.edad=edad
+      this.hobbies=hobbies
+      this.amigos=amigos
 
     }
 
@@ -20,6 +24,7 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      new Persona(this.amigos.push({nombre:nombre,edad:edad}))
 
     }
 
@@ -28,6 +33,7 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      new Persona(this.hobbies.push(hobby))
 
     }
     getFriends() {
@@ -39,6 +45,8 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      return this.amigos.map(obj=>obj.nombre)
+
     }
 
     getHobbies() {
@@ -48,6 +56,7 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      return this.hobbies.map(hobby=>hobby)
     }
 
     getPromedioEdad() {
@@ -66,13 +75,18 @@ function crearClasePersona() {
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
       // Tu código aca:
+  
+      return this.amigos.map(ami=>{
+        return ami.edad
+      }).reduce((a,b)=>a+b)/this.amigos.length
 
     }
   };
 
+
   return Persona;
 }
-
+crearClasePersona() 
 // No modifiques nada debajo de esta linea //
 
 module.exports = crearClasePersona

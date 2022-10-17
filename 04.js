@@ -14,6 +14,14 @@ function numeroSimetrico(num) {
 
   // Tu código:
 
+  var d=Math.floor(String(num).length/2)
+  var v1=String(num).slice(0,d)
+  var v2=String(num).split("").reverse().join("").slice(0,d)
+  if(v1===v2){
+    return true
+  }else{
+    return false  
+  }
 }
 
 // No modifiques nada debajo de esta linea //

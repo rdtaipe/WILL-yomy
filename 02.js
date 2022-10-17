@@ -12,6 +12,9 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+
+  return strings.filter(string=>
+    string.length===Math.max(...strings.map(string=>string.length)))[0]
 }
 
 // No modifiques nada debajo de esta linea //
